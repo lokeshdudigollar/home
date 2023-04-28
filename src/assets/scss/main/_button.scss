@@ -1,0 +1,54 @@
+@use 'variable.scss' as c;
+@use './mixin' as *;
+.px-btn {
+  padding: 0 25px;
+  line-height: 42px;
+  position: relative;
+  display: inline-block;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none !important;
+  transition: 0.4s;
+  letter-spacing: 0.3px;
+  cursor: pointer !important;
+  &.btn-outline {
+    border: 1px solid c.$px-theme;
+    &:hover {
+      background: c.$px-theme;
+      color: #fff;
+    }
+  }
+  &.px-btn-theme {
+    background: c.$px-theme;
+    border: 1px solid c.$px-theme;
+    color: #fff;
+    &:hover {
+      background: c.$px-white;
+      color: c.$px-theme;
+    }
+  }
+  &.px-btn-white {
+    background: c.$px-white;
+    border-color: c.$px-white;
+    color: c.$px-dark;
+    .theme-light & {
+      color: c.$px-white;
+      background: c.$px-dark;
+      border-color: c.$px-dark;
+    }
+    &:hover {
+      background: transparent;
+      color: c.$px-white;
+      transform: translateY(-3px);
+      .theme-light & {
+        color: c.$px-dark;
+      }
+    }
+  }
+}
+.btn-wrapper {
+  margin-top: 20px;
+}

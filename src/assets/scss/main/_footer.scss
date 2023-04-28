@@ -1,0 +1,30 @@
+@use 'variable.scss' as c;
+.footer {
+  padding: 12px 0;
+  background: c.$px-dark;
+  .theme-light & {
+    background: c.$px-white;
+    border-top: 1px solid rgba(c.$px-dark, 0.1);
+  }
+  .nav {
+    a {
+      color: c.$px-white;
+      font-size: 14px;
+      margin-right: 17px;
+      .theme-light & {
+        color: c.$px-dark;
+      }
+      &:hover {
+        color: c.$px-theme;
+      }
+    }
+  }
+  p {
+    color: c.$px-white;
+    font-size: 14px;
+    margin: 0;
+    .theme-light & {
+      color: c.$px-dark;
+    }
+  }
+}

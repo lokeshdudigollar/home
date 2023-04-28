@@ -1,0 +1,10 @@
+/* Bg color
+----------------------------*/
+
+@use 'variable.scss' as c;
+.dark-bg {
+  background: c.$px-bg-2;
+  .theme-light & {
+    background: c.$px-gray;
+  }
+}
